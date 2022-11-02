@@ -6,10 +6,10 @@ import org.slf4j.Logger;
 
 public class LeetMovements implements ModInitializer {
 
-    private static Logger LOGGER = LogUtils.getLogger();
+	private static final Logger LOGGER = LogUtils.getLogger();
 
-    @Override
-    public void onInitialize() {
-        LOGGER.info("Initialized LeetMovements");
-    }
+	@Override
+	public void onInitialize() {
+		LOGGER.info("Initialized LeetMovements");
+	}
 }
