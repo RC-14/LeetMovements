@@ -26,8 +26,8 @@ public abstract class ServerPlayNetworkHandlerMixin {
 		long z = Math.round(this.updatedZ * 10000000) % 10000;
 
 		if (Math.abs(x) != 1337 || Math.abs(z) != 1337) {
-			String maskedX = String.valueOf(Math.abs(this.updatedX) % 1).replaceFirst("0", "XXX");
-			String maskedZ = String.valueOf(Math.abs(this.updatedZ) % 1).replaceFirst("0", "ZZZ");
+			String maskedX = String.valueOf(Math.abs(this.updatedX)).replaceFirst("\\d+", "XXX");
+			String maskedZ = String.valueOf(Math.abs(this.updatedZ)).replaceFirst("\\d+", "ZZZ");
 
 			this.disconnect(Text.literal("Movements not LEET enough:").append("\nx: " + maskedX).append("\nz: " + maskedZ).append("""
                     \n
